@@ -5,10 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "server" : "nodemon index.js",
-    "frontend":"npm start --prefix frontend",
-    "dev":"\"npm start\"\"npm run frontend\""
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
