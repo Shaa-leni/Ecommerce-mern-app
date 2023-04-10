@@ -7,9 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "server":"nodemon index.js",
     "frontend":"npm start --prefix frontend",
-    "dev":"\"npm start\"\"npm run frontend\""
+    "dev":"nodemon index.js\"npm start\"\"npm run frontend\""
   },
   "author": "",
   "license": "ISC",
