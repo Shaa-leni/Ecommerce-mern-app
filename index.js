@@ -3,13 +3,17 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import path from "path";
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
 
 import coreRoute from './appRoutes/index.js';
 
-const APP_PORT = 3000;
+dotenv.config();
+const APP_PORT = 3000 | process.env.APP_PORT;
+
 
 const app = express();
 app.use(cors());
