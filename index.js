@@ -5,7 +5,7 @@ import path from "path";
 
 import coreRoute from './appRoutes/index.js';
 
-const APP_PORT = 5000;
+const APP_PORT = 3000;
 
 const app = express();
 app.use(cors());
