@@ -4,15 +4,15 @@ import bodyParser from 'body-parser';
 import path from "path";
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
+import coreRoute from './appRoutes/index.js';
+
 
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
 
-import coreRoute from './appRoutes/index.js';
-
 dotenv.config();
-const APP_PORT = 3000 | process.env.APP_PORT;
+const PORT = 3000 || process.env.APP_PORT;
 
 
 const app = express();
@@ -29,7 +29,7 @@ app.get('*',function(req,res){
 
 app.use(coreRoute);
 
-app.listen(APP_PORT, () => {
-  console.log(`local host started with port ${APP_PORT}`);
+app.listen(PORT, () => {
+  console.log(`local host started with port ${PORT}`);
 });
 
