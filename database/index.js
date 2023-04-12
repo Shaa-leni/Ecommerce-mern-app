@@ -1,11 +1,8 @@
 import {MongoClient} from "mongodb";
-import dotenv from 'dotenv';
-dotenv.config();
-// const APP_DB_URI= "mongodb+srv://Shaaleni:151299Sh@cluster0.mcznu7d.mongodb.net/?retryWrites=true&w=majority"
-const uri = process.env.APP_DB_URI
+const APP_DB_URI= "mongodb+srv://Shaaleni:151299Sh@cluster0.mcznu7d.mongodb.net/?retryWrites=true&w=majority"
 const APP_DB_NAME = 'ProductandProductList';
 
-const client = new MongoClient(uri);
+const client = new MongoClient(APP_DB_URI);
 
 const connect = async (collectionName) => {
   const connect = await client.connect();
