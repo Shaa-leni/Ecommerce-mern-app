@@ -5,12 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start":"node index.js",
-    "server":"nodemon index.js",
-    "frontend":"npm start --prefix frontend",
-    "dev":"concurrently \"npm start\" \"npm run frontend\" "
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm start\" \"npm run frontend\" "
   },
-
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,6 +18,10 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongodb": "^4.11.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
   }
 }
